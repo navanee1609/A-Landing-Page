@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    width:100vw;
+    overflow: hidden;
+    background-color: #333;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #333; */
+    color:aliceblue;
+    animation: ani 2s ease-in-out ;
+}
+.logo{
+    font-size: 33px;
+    padding: 1rem;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+}
+header ul li{
+    padding: 1rem;
+}
+header ul li a{
+    color: aliceblue;
+    display: inline-block;
+    transition: 2s;
+    
+}
+@keyframes ani{
+    0%{
+        transform: translateY(-222px);
+    }
+}
+header ul li a:hover{
+    background-color: aliceblue;
+    color: #333;
+    padding: 0.75rem;
+    border-radius: 0 12px;
+}
+.main{
+    display:flex;
+    overflow: hidden;
+    
+}
+.c{
+    width:50%;
+    padding: 1rem;
+    margin:5rem;
+    cursor: default;
+    animation: c 2s linear  ;
+}
+@keyframes c{
+   0%{
+    opacity: 1;
+    transform: translateX(-100%);
+   }
+}
+
+.c h1{
+    color:aliceblue;
+    font-size: 44px;
+    font-style: oblique;
+
+}
+.c h2{
+    margin: 1rem;
+    color: aliceblue;
+    font-size: 22px;
+}
+.c span{
+    color:tan
+}
+.c p{
+    color: aliceblue;
+    line-height: 1.9em;
+    margin:0.5rem;
+    padding: 1rem;
+}
+button{
+    padding: 0.76rem;
+    margin:0.5rem;
+    background-color: transparent;
+    color: aliceblue;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 2s;
+}
+button:hover{
+    background-color: aliceblue;
+    color: #333;
+}
+.img{
+    width:50%;
+    margin-top: 3%;
+    z-index: -1;
+    animation: car 4s ease-in-out ;}
+@keyframes car{
+    0%{
+        /* margin:2rem; */
+        transform: translateX(100%);
+
+    }
+    100%{
+        /* margin:2rem; */
+        transform: translateX(-220%);
+
+    }
+}
+.img img{
+    width:43rem;
+}
+@media screen and (max-width:600px){
+    body{
+        overflow: hidden;
+        min-height: 100%;
+        width:100%;
+    
+    }
+    header{
+        display:flex;
+        flex-direction: column;
+
+    }
+    header ul{
+        display:flex;
+        flex-direction: column;
+
+    }
+    .c{
+        /* width:100%; */
+        margin-top: -1rem;
+    }
+   .c h1,h2{
+    text-align: center;
+    margin: 1rem;
+   }
+   .c p{
+    margin:3rem;
+   }
+   .img{
+    width: 100%;
+    position: absolute;
+    bottom: -5%;
+    z-index: -1;
+   }
+   .img img{
+    width:12rem
+   }
+}
+@media screen and (max-width:1200px){
+    body{
+        overflow: hidden;
+        min-height: 100%;
+        width:100vw;
+    
+    }
+    header{
+        display:flex;
+        flex-direction: column;
+
+    }
+    header ul{
+        display:flex;
+        flex-direction: column;
+
+    }
+    .c{
+        width:100%;
+        margin-top: -1rem;
+    }
+   .c h1,h2{
+    text-align: center;
+    
+   }
+   .img{
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    z-index: -1;
+   }
+   .img img{
+    width:12rem
+   }
+}
